@@ -10,7 +10,7 @@ interface WidgetProps {
 
 const Widget: FunctionalComponent<WidgetProps> = ({ title, color }) => {
     return (
-        <div className={styles.Widget}>
+        <div class={styles.Widget}>
             <h1 style={{ color }}>{title}</h1>
             <Foo firstName="Joe" />
         </div>

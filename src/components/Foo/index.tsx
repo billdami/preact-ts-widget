@@ -1,5 +1,6 @@
 import { FunctionalComponent, h } from 'preact';
 import { useCallback, useState } from 'preact/hooks';
+import Input from '../Input';
 
 import styles from './styles.module.scss';
 
@@ -19,12 +20,12 @@ const Foo: FunctionalComponent<FooProps> = ({ firstName }) => {
     );
 
     return (
-        <div className={styles.Foo}>
+        <div class={styles.Foo}>
             <p>
                 Hello, {firstName} {lastName}
             </p>
             <p>
-                <input value={lastName} onInput={onLastNameInput} />
+                <Input value={lastName} onInput={onLastNameInput} />
             </p>
         </div>
     );
