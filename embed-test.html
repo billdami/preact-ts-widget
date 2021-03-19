@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Widget Test</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <style>
+            html,
+            body {
+                font: 14px/1.21 'Helvetica Neue', arial, sans-serif;
+                font-weight: 400;
+            }
+
+            .preview {
+                width: 100%;
+                max-width: 1100px;
+                margin: 80px auto;
+                border: 1px dashed rgba(0, 0, 0, 0.2);
+                position: relative;
+            }
+
+            .preview::before {
+                content: 'WIDGET PREVIEW';
+                position: absolute;
+                display: block;
+                top: -18px;
+                font-size: 11px;
+                color: rgba(0, 0, 0, 0.5);
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="./dist/index.css" />
+    </head>
+    <body>
+        <!-- the [data-widget-host="preact-widget"] selector is what is used to attach the widget -->
+        <!-- this can be configured or changed as needed -->
+        <div data-widget-host="preact-ts-widget" class="preview">
+            <!-- The below props <script> is optional, its a way of passing -->
+            <!-- in custom values/settings to the embedded widget           -->
+            <script type="text/props">
+                {
+                    "title": "My Widget",
+                    "color": "blue"
+                }
+            </script>
+        </div>
+        <script defer src="./dist/index.js"></script>
+    </body>
+</html>
