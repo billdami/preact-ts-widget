@@ -7,8 +7,9 @@
     "scripts": {
         "dev": "preact watch --template src/template.html",
         "build": "microbundle build -o dist/index.js -f es --external none",
+        "bundle-css": "#TODO: on build, prepend the built index.css to index.js as a string in a global var",
         "lint": "eslint '{src,test}/**/*.{ts,tsx}'",
-        "test": "jest"
+        "clean": "rm -rf dist/"
     },
     "files": [
         "dist"
