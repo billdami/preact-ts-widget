@@ -2,7 +2,7 @@ import { FunctionalComponent, h } from 'preact';
 import { useCallback, useState } from 'preact/hooks';
 import Input from '../Input';
 
-import './styles.css';
+import styles from './styles.module.scss';
 
 interface ExampleProps {
     firstName: string;
@@ -20,7 +20,7 @@ const Example: FunctionalComponent<ExampleProps> = ({ firstName }) => {
     );
 
     return (
-        <div class="Example">
+        <div class={styles.Example}>
             <p>
                 Hello, {firstName} {lastName}
             </p>

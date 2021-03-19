@@ -1,7 +1,7 @@
 import { FunctionalComponent, h } from 'preact';
 import Example from '../Example';
 
-import './styles.css';
+import styles from './styles.module.scss';
 
 interface WidgetProps {
     title: string;
@@ -10,9 +10,9 @@ interface WidgetProps {
 
 const Widget: FunctionalComponent<WidgetProps> = ({ title, color }) => {
     return (
-        <div class="Widget">
+        <div class={styles.Widget}>
             <h1 style={{ color }}>{title}</h1>
-            <Foo firstName="Joe" />
+            <Example firstName="Joe" />
         </div>
     );
 };

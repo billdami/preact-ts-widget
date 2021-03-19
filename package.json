@@ -6,7 +6,7 @@
     "module": "dist/index.js",
     "scripts": {
         "dev": "preact watch --template src/template.html",
-        "build": "microbundle build -o dist/index.js -f es --external none --css inline",
+        "build": "microbundle build -o dist/index.js -f es --external none",
         "lint": "eslint '{src,test}/**/*.{ts,tsx}'",
         "test": "jest"
     },

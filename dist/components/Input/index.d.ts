@@ -1,5 +1,4 @@
 import { FunctionalComponent } from 'preact';
-import './styles.css';
 interface InputProps {
     className?: string;
     value?: string;

@@ -1,5 +1,4 @@
 import { FunctionalComponent } from 'preact';
-import './styles.css';
 interface WidgetProps {
     title: string;
     color?: string;
